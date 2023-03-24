@@ -10,9 +10,9 @@ class Libro:
         dias = 0
         self.paginas = paginas
         self.velocidad = velocidad
-        dias == self.paginas/self.velocidad
+        dias = self.paginas/self.velocidad
         print(f"Se tardará {dias} días en escribir el libro")
 
-libro = Libro(v=2, paginas=100)
+libro = Libro()
 
-libro.situar_valores()
+libro.situar_valores(1000, 2)
