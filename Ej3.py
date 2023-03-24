@@ -12,16 +12,18 @@ class Cuenta:
         self.saldo = saldo
         self.retirar = retirar
         if saldo > retirar:
-            saldo == saldo - retirar
+            saldo = saldo - retirar
             print("Ha retirado {} euros, su saldo ahora es de {} euros".format((retirar), (saldo)))
         else:
             print("Saldo insuficiente")
 
-    def ingresar(self, ingresar):
+    def ingresar(self, saldo, ingresar):
         self.saldo = saldo
         self.ingresar = ingresar
         saldo = saldo + ingresar
-        print()
+        print("Ha ingresado {} euros, su saldo ahora es de {} euros".format((ingresar), (saldo)))
 
-cuenta = Cuenta("Ha ingresado {} euros, su saldo ahora es de {} euros".format((ingresar), (saldo)))
-cuenta.retirar(2000,300)
+cuenta = Cuenta()
+cuenta.retirar(2000, 300)
+cuenta.ingresar(2000, 445)
+
