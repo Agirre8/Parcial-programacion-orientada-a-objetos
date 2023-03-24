@@ -1,12 +1,24 @@
+import random as rd
+
 class Cuenta:
     def __innit__(self):
         self.id = None
         self.titular = None
         self.apetura = None
+        self.vencimiento = None
         self.numeroCuenta = None
         self.saldo = None
 
-        
+    def setearCuenta(self): 
+        print("----------------------------") 
+        print("Creando cuenta bancaria...")  
+        print("----------------------------")   
+        self.id  = rd.randrange()
+        self.titular  = input("Introduzca su nombre: ")
+        self.apertura  = input("a")
+        self.vencimiento = input("b")
+        print("Datos de la cuenta: \n ID de la cuenta: {}\n Titular de la cuenta: {}\n Fecha de apertura: {}\n Fecha de vencimiento: {}".format((self.id), (self.titular), (self.apertura), (self.vencimiento)))
+
     
     def retirar(self, saldo, retirar):
         self.saldo = saldo
@@ -35,7 +47,22 @@ class Cuenta:
             print("Saldo insuficiente")
 
 
+class PlazoFijo(Cuenta):
+    def __innit__(self):
+        super().__innit__()
+
+    def retirarFijo(self, fecha, vencimiento):
+        self.fecha = fecha
+        self.vencimiento = vencimiento
+        
+        if fecha < vencimiento:
+            print("Dinero transferido con exito")
+        else:
+            print("Dinero transferido con una comisión del 5 porciento")
+
+
 cuenta = Cuenta()
 cuenta.retirar(2000, 300)
 cuenta.ingresar(2000, 445)
 cuenta.transferir(2000, 300)
+cuenta.setearCuenta()
