@@ -40,5 +40,9 @@ class Gato(Mamifero):
     def parto(self):
         print("El animal esta de aprto")
 
+class Ornitorrinco(Mamifero, Oviparo):
+        def __innit__(self):
+            super().__init__()
+
 pollo = Pollo()
 pollo.aovar()
