@@ -1,17 +1,30 @@
 
 
+
+class Pollo(Animal, Oviparo):
+    def __innit__(self):
+        super().__init__()
+        
+
+class Gato(Animal, Mamifero):
+    def __innit__(self):
+        super().__init__()
+
+    def miau():
+        print("MIAUUUUUUUU MIAUUUUUUUU")
+
 class Oviparo(Animal):
-    super().__innit__()
 
     def __innit__(self, huevos):
+        super().__init__()
         self.huevos = huevos
     def aovar(self):
         print("El animal está poniendo huevos")
 
 class Mamifero(Animal):
 
-    super().__innit__()
     def __innit__(self, embarazo):
+        super().__init__()
         self.embarazo = embarazo
     
     def parto(self):
@@ -28,3 +41,6 @@ class Animal:
     def dormir(self):
         print("El animal esta durmiendo")
     
+pollo = Animal(3, "femenino")
+
+pollo.aovar()
