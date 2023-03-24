@@ -13,11 +13,11 @@ class Cuenta:
         print("----------------------------") 
         print("Creando cuenta bancaria...")  
         print("----------------------------")   
-        self.id  = rd.randrange()
+        self.id  = 119274557823
         self.titular  = input("Introduzca su nombre: ")
-        self.apertura  = input("a")
-        self.vencimiento = input("b")
-        print("Datos de la cuenta: \n ID de la cuenta: {}\n Titular de la cuenta: {}\n Fecha de apertura: {}\n Fecha de vencimiento: {}".format((self.id), (self.titular), (self.apertura), (self.vencimiento)))
+        self.apertura  = 2
+        self.vencimiento = 28
+        print("Datos de la cuenta: \n ID de la cuenta: {}\n Titular de la cuenta: {}\n Fecha de apertura: {} de noviembre de 2017 \n Fecha de vencimiento: {} de octubre de 2025".format((self.id), (self.titular), (self.apertura), (self.vencimiento)))
 
     
     def retirar(self, saldo, retirar):
@@ -60,9 +60,5 @@ class PlazoFijo(Cuenta):
         else:
             print("Dinero transferido con una comisión del 5 porciento")
 
-
 cuenta = Cuenta()
-cuenta.retirar(2000, 300)
-cuenta.ingresar(2000, 445)
-cuenta.transferir(2000, 300)
 cuenta.setearCuenta()
