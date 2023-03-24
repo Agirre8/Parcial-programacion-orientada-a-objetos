@@ -59,6 +59,3 @@ class PlazoFijo(Cuenta):
             print("Dinero transferido con exito")
         else:
             print("Dinero transferido con una comisión del 5 porciento")
-
-cuenta = Cuenta()
-cuenta.setearCuenta()
